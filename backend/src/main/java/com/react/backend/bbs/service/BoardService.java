@@ -1,4 +1,4 @@
-package com.react.backend.bbs;
+package com.react.backend.bbs.service;
 
 import com.react.backend.bbs.dto.ResponseBoardDto;
 import com.react.backend.bbs.dto.ResponseBoardListDto;

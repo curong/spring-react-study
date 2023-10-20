@@ -9,6 +9,7 @@ import lombok.Data;
 public class ResponseBoardListDto {
     Long idx;
     String title;
+    SearchDto searchDto;
 
     @QueryProjection
     public ResponseBoardListDto(Long idx, String title) {

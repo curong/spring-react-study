@@ -1,6 +1,7 @@
-package com.react.backend.bbs;
+package com.react.backend.bbs.web;
 
 import com.react.backend.bbs.dto.ResponseBoardListDto;
+import com.react.backend.bbs.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -25,4 +26,5 @@ public class BoardRController {
     public ResponseEntity<?> boardDetail(@PathVariable(value = "idx") Long idx) {
         return ResponseEntity.ok(boardService.getBoardDetail(idx));
     }
+
 }

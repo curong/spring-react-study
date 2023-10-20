@@ -1,4 +1,4 @@
-package com.react.backend.bbs;
+package com.react.backend.bbs.repository.custom;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.react.backend.bbs.dto.QResponseBoardListDto;
@@ -29,5 +29,14 @@ public class BoardRepositoryCustomImpl implements BoardRepositoryCustom {
                 .offset(1)
                 .limit(10)
                 .fetch();
+    }
+
+    @Override
+    public Long getTotalBoardCount() {
+        QBoardEntity qBoard = QBoardEntity.boardEntity;
+        return jpaQueryFactory
+                .select(qBoard.count())
+                .from(qBoard)
+                .fetchOne();
     }
 }

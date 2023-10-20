@@ -1,8 +1,9 @@
-package com.react.backend.bbs;
+package com.react.backend.bbs.service;
 
 import com.react.backend.bbs.dto.ResponseBoardDto;
 import com.react.backend.bbs.dto.ResponseBoardListDto;
 import com.react.backend.bbs.entity.BoardEntity;
+import com.react.backend.bbs.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
